@@ -1,6 +1,11 @@
 spring:
   application:
     name: client1
+  datasource:
+    url: jdbc:mysql://101.132.192.111:3306/dandan?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
 server:
   port: 8882
 eureka:
@@ -9,3 +14,7 @@ eureka:
       defaultZone: http://localhost:8881/eureka/
     #instance:
     # hostname: clientName
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+
